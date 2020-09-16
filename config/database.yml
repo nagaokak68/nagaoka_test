@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: nagaoka_test_production
-  username: nagaoka_test
-  password: <%= ENV['NAGAOKA_TEST_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
